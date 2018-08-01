@@ -3,11 +3,21 @@
 
 /* style for homepage */
 
-.homepage
+.sunsetpic
 {
-  background: url("https://s3-us-west-1.amazonaws.com/capetownpicture/homepagepicture.jpg") no-repeat center center fixed;
+  background: url("https://s3-us-west-1.amazonaws.com/capetownpictures/01.jpg") no-repeat center center fixed;
   background-size: cover;
 
+}
+
+.title
+{
+  font-family: dosis;
+}
+
+.home
+{
+  background:transparent;
 }
 
 .homemenu
