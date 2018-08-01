@@ -7,7 +7,6 @@
 {
   background: url("https://s3-us-west-1.amazonaws.com/capetownpictures/01.jpg") no-repeat center center fixed;
   background-size: cover;
-
 }
 
 .title
@@ -20,32 +19,14 @@
   background:transparent;
 }
 
-.homemenu
+.welcomebutton
 {
-  margin-top:5%;
-  margin-left:5%;
+  margin-left: -20%;
 }
 
-.topMenu
+#searchbutton
 {
-  font-family: proxima-nova;
-  color: white;
-  text-transform: none;
-}
-
-
-.bottomMenu
-{
-  font-family: proxima-nova;
-  color: white;
-  text-transform: none;
-  margin-top: 38%;
-}
-
-.middleMenu
-{
-  margin-left: -25%;
-  margin-top: 2%;
+  margin: 0;
 }
 
 button
@@ -56,24 +37,13 @@ button
 @media only screen and (max-width: 420px)
 {
 
-  .homemenu 
+  .title 
   {
     margin-top: 20%;
-    margin-left: 10%;
-  }
-
-  .middleMenu 
-  {
-    margin-top: 10%;
-  }
-
-  .bottomMenu 
-  {
-    margin-top: 140%;
+    font-size: 4rem;
   }
 
 }
-
 
 /* style for button */
 

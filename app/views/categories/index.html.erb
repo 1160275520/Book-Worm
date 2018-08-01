@@ -1,28 +1,13 @@
 <div class="container">
   <div class='row'>
-    <div class="col-sm-12">
-      <div class="mt-4 mb-4">
-        <h1>Listing categories <%= link_to 'New category', new_category_path, class: "btn btn-primary btn-sm" %></h1>
-      </div>
+    <div class="col-12">
+        <h1>All Categories</h1>
     </div>
-  </div>
-
-
-  <div class="row" >
-    <div class="col-sm-12">
+    <div class="col-12">
       <% @categories.each do |category| %>
-        <div class="card mb-4">
-        <h5 class="card-header"><%= category.name %></h5>
-          <div class="card-body">
-            <%= link_to 'Show', category_path(category),class: "btn btn-primary btn-sm" %>
-            <%= link_to 'Edit', edit_category_path(category), class: "btn btn-primary btn-sm" %>
-            <%= link_to 'Destroy', category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
-          </div>
-        </div>
+        <%= link_to category.name, category_path(category), :class => "btn btn-outline-info" %>
       <% end %>
     </div>
   </div>
-
-
-
 </div>
+
