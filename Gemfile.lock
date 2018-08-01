@@ -684,9 +684,6 @@ GEM
       responders
       warden (~> 1.2.3)
     dotenv (2.5.0)
-    dotenv-rails (2.5.0)
-      dotenv (= 2.5.0)
-      railties (>= 3.2, < 6.0)
     elasticsearch (6.1.0)
       elasticsearch-api (= 6.1.0)
       elasticsearch-transport (= 6.1.0)
@@ -877,7 +874,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise (~> 4.4, >= 4.4.3)
-  dotenv-rails
+  dotenv
   jbuilder (~> 2.5)
   jquery_pwstrength_bootstrap_4 (~> 1.2, >= 1.2.2)
   listen (>= 3.0.5, < 3.2)
