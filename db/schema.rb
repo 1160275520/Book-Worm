@@ -23,8 +23,12 @@ ActiveRecord::Schema.define(version: 2018_08_02_005332) do
     t.string "bookpdf"
   end
 
-# Could not dump table "categories" because of following StandardError
-#   Unknown type 'url' for column 'image'
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
+  end
 
   create_table "share_books", force: :cascade do |t|
     t.integer "taker_id"
