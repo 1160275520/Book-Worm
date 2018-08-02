@@ -1,13 +1,16 @@
-<div class="container">
+<div class="container darkcyan">
   <div class='row'>
-    <div class="col-12">
+    <div class="col-12 categoryname">
         <h1>All Categories</h1>
     </div>
-    <div class="col-12">
       <% @categories.each do |category| %>
-        <%= link_to category.name, category_path(category), :class => "btn btn-outline-info" %>
+        <div class="col-6 categoryname">
+          <%= link_to category.name, category_path(category), :class => "btn btn-outline-info"%>
+          <a href="<%= category_path(category)%>">
+            <img class="categoryimage" src="<%= category.image %>" width="90%" height="90%">
+          </a>
+        </div>
       <% end %>
-    </div>
   </div>
 </div>
 

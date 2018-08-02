@@ -7,21 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
-Users=[{email:"gabriel@gmail.com", password:"123456"},{email:"pop90@gmail.com" ,password:"123456"},{email:"rosacolo@gmail.com" ,password:"123456"},{email:"maroon@gmail.com", password:"123456"}]
-Books=[{title: "Dulceagrio",author:"Stephanie Danler",url_file:"http://aristobulo.psuv.org.ve/wp-content/uploads/2008/10/garcia-marquez-gabriel-cien-anos-de-soledad1.pdf",owner_id: 1},{title: "Cien años de soledad",author:"Gabriel Garcia Marques",url_file:"http://aristobulo.psuv.org.ve/wp-content/uploads/2008/10/garcia-marquez-gabriel-cien-anos-de-soledad1.pdf",owner_id: 2},{title: "HTML and CSS",author:"Jon Duckett",url_file:"http://aristobulo.psuv.org.ve/wp-content/uploads/2008/10/garcia-marquez-gabriel-cien-anos-de-soledad1.pdf",owner_id: 2},{title: "Harry potter Caliz de fuego",author:"J. K. ROWLING",url_file: "http://aristobulo.psuv.org.ve/wp-content/uploads/2008/10/garcia-marquez-gabriel-cien-anos-de-soledad1.pdf" ,
-  owner_id: 2},{title: "Cuentos de buenas noches para ninas rebeldes 2",author:"FRANCESCA CAVALLO Y ELENA FAVILLI",url_file:"http://aristobulo.psuv.org.ve/wp-content/uploads/2008/10/garcia-marquez-gabriel-cien-anos-de-soledad1.pdf", owner_id: 3}]
-
-Categories=[{ name: "Education"},{name: "History"},{name: "Horror"},{name: "Health"},{name: "Travel"},{name: "Fiction"},{name: "Romance"},{name: "Other"}]
-
+Categories=[{ name: "Education", image: "http://www.howtoplugin.com/wp-content/uploads/2018/04/education-theme.jpg"},{name: "History", image: "http://www.racsonline.com/wp-content/uploads/2015/10/1123676.jpg"},{name: "Science", image: "https://us-east-1.tchyn.io/snopes-production/uploads/2017/12/science-stock-image.png?resize=865,452"},{name: "Travel", image: "https://udemy-images.udemy.com/course/750x422/146490_fa45_4.jpg"},{name: "Novel", image: "https://spectator.imgix.net/content/uploads/2012/11/DickensBatman.jpg?auto=compress,enhance,format&crop=faces,entropy,edges&fit=crop&w=600&h=400"},{name: "Drama", image: "http://www.phcs.org.uk/_assets/img/Curric/drama.jpg"},{name: "Other", image: "https://cdn.dribbble.com/users/472/screenshots/191949/other_icon.png"}]
 Categories.each do |category|
-
-   Category.create(name: category[:name])
-end
-Books.each do |book|
-    Book.create(title: book[:title],author: book[:author],owner_id: book[:owner_id])
-end
-
-Users.each do |user|
-    User.create(email: user[:email], password: user[:password])
+   Category.find_or_create_by(name: category[:name], image: category[:image])
 end

@@ -2,11 +2,13 @@
    <div class="form-w3-agile">
       <h2>Share Your Book</h2>
       <%= form_for @book do |f| %>
-
             <input placeholder="Title" type="text" name="book[title]" id="book_title" value="<%= @book.title %>">
             <input placeholder="Author" type="text" name="book[author]" id="book_author" value="<%= @book.author %>">
-            <% category_id = @book.category && @book.category.id %>
-            <%= f.select(:category_id, options_for_select(@categories, category_id), :prompt => "Select one!") %>
+            <div class="row select">
+               <% category_id = @book.category && @book.category.id %>
+               <%= f.select(:category_id, options_for_select(@categories, category_id), :prompt => "Select one!") %>
+               <h6>Select Categories</h6>
+            </div>
             <%= f.file_field :url_file %>
             <input type="submit" name="commit" value="Submit" class="btn btn-primary" data-disable-with="Submit">
         </div>

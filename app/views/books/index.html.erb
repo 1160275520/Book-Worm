@@ -1,11 +1,17 @@
+<h3 class="white">All Books</h3>
+
+<div class="sellbutton">
+   <a href="/books/new"><button class="btn btn-outline-light my-2 my-sm-0">Share Your Book</button></a>
+</div>
+
 <div class="row index-books">
   <% @books.each_with_index do |book,index| %>
-    <%= render 'book_card', book: book, index: index %>
+    <%= render 'book_info', book: book, index: index %>
   <% end %>
 </div>
 
-<a class="btn btn-primary" href="/books/new">Share my book</a>
 
 <script type="text/javascript">
    var books=loadBooks();
 </script>
+

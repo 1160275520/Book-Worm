@@ -1,17 +1,11 @@
-<div class="container" >
-  <%= link_to 'All Categories', categories_path, :class => "btn btn-outline-info" %>
+<div class="container darkcyan">
   <div class="row">
     <div class="col-12">
       <h1><%= @category.name %></h1>
+      <%= link_to 'Back To All Categories', categories_path, :class => "btn btn-outline-info" %>
     </div>
+      <% @category.books.each_with_index do |book, index| %>
+       <%= render 'books/book_info', book: book, index: index %>
+      <% end %>
   </div>
-  <div class="row">
-      <div class="col-12">
-          <div class="card-deck">
-          <% @category.books.each_with_index do |book, index| %>
-           <%= render 'books/book_card', book: book, index: index %>
-          <% end %>
-        </div>
-      </div>
-    </div>
 </div>

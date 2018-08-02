@@ -7,7 +7,8 @@
         <input type="password" name="user[password]" placeholder="Password" required="">
         <p class="p-bottom-w3ls">Are you new?<a class="w3_play_icon1" href="/users/sign_up">  Register here</a></p>
         <p class="p-bottom-w3ls">Forget your password<a class="" href="/users/password/new">  Retrieve here </a></p>  
-        <input type="submit" value="Login">
+        <div class="alert"><%= flash[:alert] %></div>
+        <input class="submitbutton" type="submit" value="Login">
      </form>
   </div>
 </div>
